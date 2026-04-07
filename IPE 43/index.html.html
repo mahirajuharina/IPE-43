@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skrining Kesehatan Jiwa Anak & Remaja</title>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      
+      <div id="page-welcome" class="page active">
+        <div class="hero">
+          <div class="badge">Portal Skrining</div>
+          <h1>Skrining Kesehatan Jiwa Anak & Remaja</h1>
+          <p class="sub">
+            Instrumen Mini MindHEAR Youth Scale V.1 digunakan untuk mendeteksi gejala kecemasan dan depresi berdasarkan kondisi 2 minggu terakhir.
+          </p>
+        </div>
+        <div class="section">
+          <div class="notice">
+            <strong>Penting:</strong> Hasil ini merupakan skrining awal untuk deteksi dini, bukan diagnosis medis pengganti konsultasi profesional.
+          </div>
+          <div class="actions">
+            <button class="btn-primary" onclick="goToPage('page-kuesioner')">Mulai Skrining</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="page-kuesioner" class="page">
+        <div class="hero">
+          <div class="badge">Langkah 1 dari 2</div>
+          <h1>Kuesioner MMYS V.1</h1>
+          <p class="sub">Pilih jawaban dengan jujur sesuai dengan apa yang dirasakan atau diamati.</p>
+        </div>
+        <form id="screeningForm" class="section">
+          <div class="field">
+            <label for="ageGroup">Kelompok Usia Sasaran</label>
+            <select id="ageGroup" name="ageGroup" required>
+              <option value="">-- Pilih kelompok usia --</option>
+              <option value="7-9">Usia 7–9 tahun (diisi oleh orang tua/pengasuh)</option>
+              <option value="10-18">Usia 10–18 tahun (diisi mandiri oleh remaja)</option>
+            </select>
+          </div>
+
+          <div id="introText" class="notice hidden"></div>
+          <div class="grid" id="questionsContainer"></div>
+
+          <div class="actions hidden" id="actionButtons">
+            <button type="submit" class="btn-primary">Lihat Hasil</button>
+            <button type="button" class="btn-secondary" id="resetBtn">Reset</button>
+          </div>
+        </form>
+      </div>
+
+      <div id="page-layanan" class="page">
+        <div class="hero">
+          <div class="badge" style="background: var(--warn-bg); color: var(--warn);">Perhatian Khusus</div>
+          <h1>Informasi Layanan Kejiwaan</h1>
+          <p class="sub">Berdasarkan hasil skrining, kami menyarankan kamu untuk mendapatkan dukungan lebih lanjut.</p>
+        </div>
+        <div class="section">
+          <div class="notice danger">
+            <strong>Jangan ragu untuk mencari bantuan.</strong> Kamu mungkin sedang mengalami gejala kecemasan atau depresi yang memerlukan evaluasi tenaga profesional.
+          </div>
+          <div class="grid" style="margin-bottom: 24px;">
+            <div class="question">
+              <h3>📍 Kontak Psikolog/Faskes Terdekat</h3>
+              <p>Segera kunjungi Poli Jiwa / Psikologi di Puskesmas Kecamatan atau RSUD terdekat di wilayahmu.</p>
+            </div>
+            <div class="question">
+              <h3>📱 Konseling Online </h3>
+              <p>Hubungi .... di link <strong>12345</strong> untuk pendampingan dan arahan awal secara terjangkau.</p>
+            </div>
+          </div>
+          <div class="actions">
+            <button class="btn-primary" onclick="goToPage('page-edukasi')">Lanjut</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="page-edukasi" class="page">
+        <div class="hero">
+          <div class="badge" style="background: var(--success-bg); color: var(--success);">Edukasi Kesehatan</div>
+          <h1>Edukasi Kesehatan Jiwa</h1>
+          <p class="sub">Mari pelajari cara menjaga kesehatan mental agar tetap optimal setiap hari.</p>
+        </div>
+        <div class="section">
+          <div class="summary-box">
+            <h3 style="margin-top:0;">Penguatan Faktor Protektif</h3>
+            <p style="margin-bottom:0; color: var(--muted);">Terlibatlah dalam kegiatan ekstrakurikuler, lakukan hobi yang positif, dan jaga relasi sosial yang sehat dengan keluarga, teman, serta guru.</p>
+          </div>
+          
+          <div class="content-box">
+            <em>[Area Penempatan Poster / Konten IG Feeds / Infografis P3LP]</em><br>
+            <small>Silakan baca materi edukasi di atas.</small>
+          </div>
+          
+          <div class="actions">
+            <button class="btn-primary" onclick="goToPage('page-closure')">Selesai Membaca</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="page-closure" class="page">
+        <div class="hero" style="text-align: center; padding-top: 48px;">
+          <div style="font-size: 48px; margin-bottom: 16px;">✨</div>
+          <h1>Terima Kasih!</h1>
+          <p class="sub" style="margin: 0 auto;">Skrining telah selesai dilakukan. Data dan partisipasimu sangat berharga.</p>
+        </div>
+        <div class="section" style="text-align: center; padding-bottom: 48px;">
+          <p>Jaga selalu kesehatan fisik dan mentalmu. Lakukan pemeriksaan rutin setidaknya 1 kali per tahun.</p>
+          <div class="actions" style="justify-content: center;">
+            <button class="btn-secondary" onclick="location.reload()">Kembali ke Halaman Awal</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
