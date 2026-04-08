@@ -9,7 +9,7 @@
 <body>
   <div class="wrap">
     <div class="card">
-      
+
       <div id="page-welcome" class="page active">
         <div class="hero">
           <div class="badge">Portal Skrining</div>
@@ -54,28 +54,44 @@
         </form>
       </div>
 
-      <div id="page-layanan" class="page">
-        <div class="hero">
-          <div class="badge" style="background: var(--warn-bg); color: var(--warn);">Perhatian Khusus</div>
-          <h1>Informasi Layanan Kejiwaan</h1>
-          <p class="sub">Berdasarkan hasil skrining, kami menyarankan kamu untuk mendapatkan dukungan lebih lanjut.</p>
+      <!-- HALAMAN HASIL DINAMIS -->
+      <div id="page-hasil" class="page">
+        <div class="hero" id="resultHero">
+          <div class="badge" id="resultBadge">Hasil Skrining</div>
+          <h1 id="resultTitle">Hasil Skrining</h1>
+          <p class="sub" id="resultSubtitle"></p>
         </div>
+
         <div class="section">
-          <div class="notice danger">
-            <strong>Jangan ragu untuk mencari bantuan.</strong> Kamu mungkin sedang mengalami gejala kecemasan atau depresi yang memerlukan evaluasi tenaga profesional.
+          <div id="resultSummaryBox" class="summary-box">
+            <h3 id="resultHeading" style="margin-top:0;"></h3>
+            <p id="resultMainText" style="margin-bottom:0; color: var(--muted);"></p>
           </div>
-          <div class="grid" style="margin-bottom: 24px;">
-            <div class="question">
-              <h3>📍 Kontak Psikolog/Faskes Terdekat</h3>
-              <p>Segera kunjungi Poli Jiwa / Psikologi di Puskesmas Kecamatan atau RSUD terdekat di wilayahmu.</p>
-            </div>
-            <div class="question">
-              <h3>📱 Konseling Online </h3>
-              <p>Hubungi .... di link <strong>12345</strong> untuk pendampingan dan arahan awal secara terjangkau.</p>
+
+          <div class="result-detail-box">
+            <h3>Ringkasan Hasil</h3>
+            <div class="result-pills">
+              <span class="result-pill" id="anxietyPill">Ansietas: -</span>
+              <span class="result-pill" id="depressionPill">Depresi: -</span>
+              <span class="result-pill" id="overallPill">Risiko: -</span>
             </div>
           </div>
+
+          <div class="result-detail-box">
+            <h3 id="recommendationTitle">Rekomendasi</h3>
+            <ul id="recommendationList" class="result-list"></ul>
+          </div>
+
+          <div class="notice" id="disclaimerBox">
+            <strong>Disclaimer:</strong>
+            <span id="disclaimerText">
+              Hasil ini merupakan skrining awal dan bukan diagnosis medis. Untuk penilaian lebih lanjut, disarankan berkonsultasi dengan tenaga profesional.
+            </span>
+          </div>
+
           <div class="actions">
             <button class="btn-primary" onclick="goToPage('page-edukasi')">Lanjut</button>
+            <button class="btn-secondary" onclick="goToPage('page-kuesioner')">Kembali ke Kuesioner</button>
           </div>
         </div>
       </div>
@@ -89,14 +105,16 @@
         <div class="section">
           <div class="summary-box">
             <h3 style="margin-top:0;">Penguatan Faktor Protektif</h3>
-            <p style="margin-bottom:0; color: var(--muted);">Terlibatlah dalam kegiatan ekstrakurikuler, lakukan hobi yang positif, dan jaga relasi sosial yang sehat dengan keluarga, teman, serta guru.</p>
+            <p style="margin-bottom:0; color: var(--muted);">
+              Terlibatlah dalam kegiatan ekstrakurikuler, lakukan hobi yang positif, dan jaga relasi sosial yang sehat dengan keluarga, teman, serta guru.
+            </p>
           </div>
-          
+
           <div class="content-box">
             <em>[Area Penempatan Poster / Konten IG Feeds / Infografis P3LP]</em><br>
             <small>Silakan baca materi edukasi di atas.</small>
           </div>
-          
+
           <div class="actions">
             <button class="btn-primary" onclick="goToPage('page-closure')">Selesai Membaca</button>
           </div>
